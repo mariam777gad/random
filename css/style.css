@@ -1,0 +1,177 @@
+.nav-icon-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.276);
+}
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.navbar-nav > li:nth-child(4) {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-orange-500);
+}
+.navbar-nav > li:not(.navbar-nav > li:nth-child(4)):hover {
+  color: var(--color-orange-500);
+}
+.navbar-nav > li {
+  cursor: pointer;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+.rating-container {
+  top: 15px;
+  left: 15px;
+  padding: 5px 15px;
+  background-color: white;
+}
+.cook-time {
+  position: absolute;
+  bottom: 20px;
+  width: 90%;
+  left: 50%;
+}
+.header-section {
+  height: 90vh;
+    overflow: hidden;
+}
+
+.card-image {
+  height: 100%;
+}
+.row>* {
+  padding: 0 !important;
+}
+.recipe-title-icons > span {
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-orange-100);
+  color: var(--color-orange-500);
+  cursor: pointer;
+}
+.recipe-title-icons > span:hover {
+  background-color: var(--color-orange-200);
+}
+
+.error-section {
+  border-left: 5px solid var(--color-red-500);
+}
+.nav-tabs{
+  padding-bottom: 15px;
+}
+.nav-link {
+  color: var(--color-gray-600) !important;
+  border: none !important;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--color-gray-900) !important;
+}
+.nav-tabs .nav-link.active {
+  border: none;
+  color: var(--color-orange-500) !important;
+  border-bottom: 2px solid var(--color-orange-500) !important;
+}
+.nav-link:focus-visible {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.nav-tabs .nav-link.active:hover {
+  color: var(--color-gray-900) !important;
+}
+.ing-content span:nth-child(1),
+.tips-content span:nth-child(1) {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color-orange-500);
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.ins-content span:nth-child(1) {
+  width: 45px;
+  height: 45px;
+  border-radius: 15px;
+  background-color: var(--color-orange-500);
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-size: 20px;
+}
+.ins-content,.tips-content,.ing-content,#nutrition{
+  overflow-y: scroll;
+  height: 200px;
+}
+.tips-content>div {
+   padding: 15px;
+  background-color: var(--color-yellow-100);
+  border-left: 5px solid var(--color-orange-300);
+  border-radius: 15px;
+}
+.nutrition-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.nutrition-icon.icon-1 {
+  background-color:var(--color-orange-100) ;
+  color:var(--color-red-500) ;
+}
+.nutrition-icon.icon-2 {
+  background-color:var(--color-blue-100) ;
+  color:var(--color-blue-600) ;
+}
+.nutrition-icon.icon-3 {
+  background-color:var(--color-yellow-100) ;
+  color: var(--color-amber-400);
+}
+.nutrition-icon.icon-4 {
+  background-color: var(--color-red-100);
+  color:var(--color-red-800) ;
+}
+.nutrition-icon.icon-5 {
+  background-color:var(--color-green-100) ;
+  color: var(--color-green-700);
+}
+.nutrition-icon.icon-6 {
+  background-color: var(--color-pink-100);
+  color:var(--color-pink-600) ;
+}
+section .row .btn{
+  background-image: linear-gradient(to right,var(--color-orange-500) 10%,var(--color-red-500));
+  color: white;
+  margin-block: 10px;
+  transition: transform .5s;
+}
+section .row .btn:hover{
+  transform: scale(1.1);
+}

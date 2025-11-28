@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+  </head>
+  <body>
+    <!-- start nav -->
+    <nav class="navbar navbar-expand-lg bg-white py-3">
+      <div class="container">
+        <div class="d-flex align-items-center gap-3">
+          <div class="nav-icon-container text-lg text-white bg-orange-500">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <div>
+            <h4 class="mb-0">What's For Dinner</h4>
+            <p class="mb-0 text-muted">Your daily meal inspiration</p>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav ms-auto align-items-start align-items-lg-center gap-3 mt-4 mt-lg-0"
+          >
+            <li class="nav-item">
+              <i class="fa-solid fa-bookmark"></i>
+              <span class="d-inline-block d-lg-none">Saved Recipes</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span class="d-inline-block d-lg-none">Recent</span>
+            </li>
+            <li class="nav-item">
+              <i class="fa-solid fa-gear"></i>
+              <span class="d-inline-block d-lg-none">Settings</span>
+            </li>
+            <li class="nav-item">
+              <img src="images/avatar-2-CwUcGkzI.jpg" alt="" />
+              <span class="d-inline-block d-lg-none"> Profile</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end nav -->
+
+    <section class="bg-yellow-50 py-5">
+      <div class="container bg-white header-section rounded-4">
+        <div class="row h-100" id="rowData">
+          <div class="col-lg-5 h-100">
+            <div class="position-relative h-100">
+              <div class="card-image"><img src="" alt="" id="images" /></div>
+              <p class="position-absolute rating-container rounded-pill">
+                <i class="fa-solid fa-star text-warning me-2"></i>
+
+                <span id="rateAverage">4.9</span>
+                <span class="text-muted"
+                  >(<span id="rateQuantity">478</span> reviews)</span
+                >
+              </p>
+              <div
+                class="bg-white rounded-3 py-3 px-3 d-flex justify-content-around text-center cook-time translate-middle-x"
+              >
+                <div>
+                  <i class="fa-solid fa-clock fs-4 text-orange-500"></i>
+                  <p class="text-muted mb-0">Prep Time</p>
+                  <p class="mb-0" id="prepTime">cook</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-fire-burner fs-4 text-red-600"></i>
+                  <p class="text-muted mb-0">Cook Time</p>
+                  <p class="mb-0" id="cookTime">cook</p>
+                </div>
+                <div>
+                  <i class="fa-solid fa-users fs-4 text-blue-500"></i>
+                  <p class="text-muted mb-0">Servings</p>
+                  <p class="mb-0" id="servings">cook</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7 p-3">
+            <div class="mb-3">
+              <span
+                id="difficulty"
+                class="bg-green-100 text-green-600 py-1 px-3 rounded-pill"
+                >Intermediate</span
+              >
+              <span
+                id="category"
+                class="bg-blue-100 text-blue-600 py-1 px-3 rounded-pill"
+                >Italian</span
+              >
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <h2 class="fw-bold" id="name">Lasagna Bolognese</h2>
+              <div class="recipe-title-icons">
+                <span><i class="fa-solid fa-bookmark"></i></span>
+                <span><i class="fa-solid fa-share-nodes"></i></span>
+              </div>
+            </div>
+            <p class="text-muted" id="description">
+              Layered Italian pasta with rich meat sauce and béchamel
+            </p>
+            <div id="totalTime">
+              <!-- <div
+                class="d-flex align-items-center gap-3 bg-red-100 p-3 rounded-3 error-section"
+              >
+                <div>
+                  <i class="fa-solid fa-triangle-exclamation text-red-500"></i>
+                </div>
+                <div>
+                  <p class="mb-0 text-red-800 fw-medium">
+                    Extended Preparation Time
+                  </p>
+                  <p class="mb-0 text-red-600 fs-6 lead">
+                    This recipe requires more than 45 minutes to prepare. Plan
+                    accordingly!
+                  </p>
+                </div>
+              </div> -->
+            </div>
+
+            <ul class="nav nav-tabs m-4" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="home-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#home-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="home-tab-pane"
+                  aria-selected="true"
+                >
+                  <i class="fa-solid fa-list"></i> Ingredients
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="profile-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#profile-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="profile-tab-pane"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-book-open"></i> Instructions
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="contact-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#contact-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="contact-tab-pane"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-chart-pie"></i> Nutrition
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="category-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#category-tab-pane"
+                  type="button"
+                  role="tab"
+                  aria-controls="category-tab-pane"
+                  aria-selected="false"
+                >
+                  <i class="fa-solid fa-lightbulb"></i> Chef's Tips
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="home-tab-pane"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+                tabindex="0"
+              >
+                <div class="ing-content bg-orange-100 p-3" id="ingredients">
+                  <!-- <div class="mb-3">
+                    <span>1</span>
+                    <span class="text-muted">12 lasagna sheets</span>
+                  </div> -->
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="profile-tab-pane"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+                tabindex="0"
+              >
+                <div class="ins-content bg-white p-3" id="instructions">
+                  <!-- <div class="mb-3">
+                    <span> 1</span>
+                    <span class="text-muted"
+                      >Cook ground beef with onion and carrots until browned.
+                      Add tomatoes and simmer for 30 minutes.</span
+                    >
+                  </div> -->
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="contact-tab-pane"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+                tabindex="0"
+              >
+                <div class="container nutrition-content">
+                  <div class="row g-3" id="nutrition">
+                    <!-- <div class="col-6" >
+                        <div
+                        class="inner bg-gray-200 d-flex justify-content-between align-items-center gap-5 p-3 rounded-3"
+                      >
+                        <div>
+                          <span class="nutrition-icon icon-1 me-2"
+                            ><i class="fa-solid fa-fire"></i></span
+                          ><span>Calories</span>
+                        </div>
+                        <div class="fw-medium">
+                          <span>680 kcal</span>
+                        </div>
+                      </div> 
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="category-tab-pane"
+                role="tabpanel"
+                aria-labelledby="category-tab"
+                tabindex="0"
+              >
+                <div class="tips-content" id="tips">
+                  <!-- <div class="mb-3">
+                    <span><i class="fa-solid fa-check"></i></span>
+                    <span
+                      >Make bolognese sauce a day ahead for better flavor</span
+                    >
+                  </div> -->
+                </div>
+              </div>
+            </div>
+
+            <button onclick="getRandom()" class="btn w-50">
+              <i class="fa-solid fa-rotate"></i> Try Another Recipe
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
