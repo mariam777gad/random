@@ -14,6 +14,10 @@ img {
   height: 100%;
   display: block;
 }
+.col-lg-7 {
+  overflow-y: scroll;
+  height: 95vh;
+}
 
 .navbar-nav > li:nth-child(4) {
   width: 50px;
@@ -45,10 +49,6 @@ img {
   bottom: 20px;
   width: 90%;
   left: 50%;
-}
-.header-section {
-  height: 90vh;
-    overflow: hidden;
 }
 
 .card-image {
@@ -115,7 +115,7 @@ img {
   width: 45px;
   height: 45px;
   border-radius: 15px;
-  background-color: var(--color-orange-500);
+  background-color: var(--color-orange-500) !important;
   color: white;
   display: inline-flex;
   justify-content: center;
@@ -123,9 +123,12 @@ img {
   margin-right: 10px;
   font-size: 20px;
 }
+.tab-content{
+  height: 280px;
+}
 .ins-content,.tips-content,.ing-content,#nutrition{
   overflow-y: scroll;
-  height: 200px;
+  height: 250px;
 }
 .tips-content>div {
    padding: 15px;
@@ -174,4 +177,7 @@ section .row .btn{
 }
 section .row .btn:hover{
   transform: scale(1.1);
+}
+::-webkit-scrollbar-thumb{
+  background-color:red !important;
 }
