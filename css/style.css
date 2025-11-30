@@ -53,7 +53,6 @@ img {
 
 .card-image {
   height: 100%;
-  /* overflow: hidden; */
 }
 .row>* {
   padding: 0 !important;
