@@ -1023,16 +1023,20 @@ function getRandom() {
       "fa-solid fa-cube",
     ];
     var keys = ["calories", "protein", " carbs", "  fat", "fiber", " sodium"];
+    var values=Object.values(randomItem.nutrition)
+    console.log(values)
     for (var i = 0; i < recipeData.length; i++) {
       content += `
-      <div class="col-6" >
-        <div class="inner bg-gray-200 d-flex justify-content-between align-items-center gap-5 p-3 rounded-3">
-          <div>
-            <span class="nutrition-icon icon-1 me-2"><i class="${iconsClassList[i]}"></i></span>
+      <div class="col-6 " >
+        <div class="inner d-flex justify-content-between align-items-center gap-5 p-3 rounded-3">
+          <div class="bg-gray-200 d-flex justify-content-between align-items-center gap-5 p-3 rounded-3 w-100">
+            <div>
+            <span class="nutrition-icon icon-${i+1} me-2"><i class="${iconsClassList[i]}"></i></span>
             <span>${keys[i]}</span>
           </div>
           <div class="fw-medium">
-            <span>680 kcal</span>
+            <span>${values[i]}</span>
+          </div>
           </div>
         </div>  
       </div>

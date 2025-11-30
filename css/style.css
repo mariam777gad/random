@@ -16,7 +16,7 @@ img {
 }
 .col-lg-7 {
   overflow-y: scroll;
-  height: 95vh;
+  height: 90vh;
 }
 
 .navbar-nav > li:nth-child(4) {
@@ -53,6 +53,7 @@ img {
 
 .card-image {
   height: 100%;
+  /* overflow: hidden; */
 }
 .row>* {
   padding: 0 !important;
@@ -179,5 +180,9 @@ section .row .btn:hover{
   transform: scale(1.1);
 }
 ::-webkit-scrollbar-thumb{
-  background-color:red !important;
+  background-color: var(--color-orange-500) !important;
+}
+:not(.btn-check)+.btn:active{
+  color: white !important;
+  border-color: none;
 }
