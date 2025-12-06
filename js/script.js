@@ -933,17 +933,16 @@ function getRandom() {
 
   var randomItem = recipeData[random]; //get the object of random number
 
-  document.getElementById("images").src = randomItem.imgCover;
-  document.getElementById("rateAverage").innerHTML = randomItem.ratingsAverage;
-  document.getElementById("rateQuantity").innerHTML =
-    randomItem.ratingsQuantity;
-  document.getElementById("prepTime").innerHTML = randomItem.prepTime;
-  document.getElementById("cookTime").innerHTML = randomItem.cookTime;
-  document.getElementById("servings").innerHTML = randomItem.servings;
-  document.getElementById("difficulty").innerHTML = randomItem.difficulty;
-  document.getElementById("category").innerHTML = randomItem.category;
-  document.getElementById("name").innerHTML = randomItem.name;
-  document.getElementById("description").innerHTML = randomItem.description;
+  document.getElementById("images").src = recipeData[random].imgCover;
+  document.getElementById("rateAverage").innerHTML = recipeData[random].ratingsAverage;
+  document.getElementById("rateQuantity").innerHTML =recipeData[random].ratingsQuantity;
+  document.getElementById("prepTime").innerHTML = recipeData[random].prepTime;
+  document.getElementById("cookTime").innerHTML = recipeData[random].cookTime;
+  document.getElementById("servings").innerHTML = recipeData[random].servings;
+  document.getElementById("difficulty").innerHTML = recipeData[random].difficulty;
+  document.getElementById("category").innerHTML = recipeData[random].category;
+  document.getElementById("name").innerHTML = recipeData[random].name;
+  document.getElementById("description").innerHTML = recipeData[random].description;
 
   var container = "";
   if (randomItem.totalTime > 45) {
@@ -970,11 +969,11 @@ function getRandom() {
 
   function getIngredients() {
     var content = " ";
-    for (var i = 0; i < recipeData.length; i++) {
+    for (var i = 0; i < recipeData[random].ingredients.length; i++) {
       content += `
       <div class="mb-3">
         <span>${i + 1}</span>
-        <span class="text-muted">${randomItem.ingredients[i]}</span>
+        <span class="text-muted">${recipeData[random].ingredients[i]}</span>
       </div>
     `;
     }
@@ -984,12 +983,12 @@ function getRandom() {
 
   function getInstructions() {
     var content = "";
-    for (var i = 0; i < recipeData.length; i++) {
+    for (var i = 0; i < recipeData[random].instructions.length; i++) {
       content += `
       <div class="mb-3">
           <span>${i + 1}</span>
           <span class="text-muted">
-          ${randomItem.instructions[i]}
+          ${recipeData[random].instructions[i]}
           </span>
       </div>
       `;
@@ -1000,11 +999,11 @@ function getRandom() {
 
   function getTips() {
     var content = "";
-    for (var i = 0; i < recipeData.length; i++) {
+    for (var i = 0; i < recipeData[random].tips.length; i++) {
       content += `
       <div class="mb-2">
         <span><i class="fa-solid fa-check"></i></span>
-        <span>${randomItem.tips[i]}</span>
+        <span>${recipeData[random].tips[i]}</span>
       </div>
       `;
     }
@@ -1022,10 +1021,11 @@ function getRandom() {
       "fa-solid fa-seedling",
       "fa-solid fa-cube",
     ];
-    var keys = ["calories", "protein", " carbs", "  fat", "fiber", " sodium"];
+    var keys = Object.keys(recipeData[random].nutrition)
     var values=Object.values(randomItem.nutrition)
-    console.log(values)
-    for (var i = 0; i < recipeData.length; i++) {
+
+
+    for (var i = 0; i < keys.length; i++) {
       content += `
       <div class="col-6 " >
         <div class="inner d-flex justify-content-between align-items-center gap-5 p-3 rounded-3">
