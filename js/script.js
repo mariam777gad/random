@@ -931,21 +931,25 @@ var recipeData = [
 function getRandom() {
   var random = Math.floor(Math.random() * recipeData.length); //get the random number
 
-  var randomItem = recipeData[random]; //get the object of random number
+  recipeData[random]; //get the object of random number
 
   document.getElementById("images").src = recipeData[random].imgCover;
-  document.getElementById("rateAverage").innerHTML = recipeData[random].ratingsAverage;
-  document.getElementById("rateQuantity").innerHTML =recipeData[random].ratingsQuantity;
+  document.getElementById("rateAverage").innerHTML =
+    recipeData[random].ratingsAverage;
+  document.getElementById("rateQuantity").innerHTML =
+    recipeData[random].ratingsQuantity;
   document.getElementById("prepTime").innerHTML = recipeData[random].prepTime;
   document.getElementById("cookTime").innerHTML = recipeData[random].cookTime;
   document.getElementById("servings").innerHTML = recipeData[random].servings;
-  document.getElementById("difficulty").innerHTML = recipeData[random].difficulty;
+  document.getElementById("difficulty").innerHTML =
+    recipeData[random].difficulty;
   document.getElementById("category").innerHTML = recipeData[random].category;
   document.getElementById("name").innerHTML = recipeData[random].name;
-  document.getElementById("description").innerHTML = recipeData[random].description;
+  document.getElementById("description").innerHTML =
+    recipeData[random].description;
 
   var container = "";
-  if (randomItem.totalTime > 45) {
+  if (recipeData[random].totalTime > 45) {
     container += `
     <div class="d-flex align-items-center gap-3 bg-red-100 p-3 rounded-3 error-section">
       <div>
@@ -1021,9 +1025,8 @@ function getRandom() {
       "fa-solid fa-seedling",
       "fa-solid fa-cube",
     ];
-    var keys = Object.keys(recipeData[random].nutrition)
-    var values=Object.values(randomItem.nutrition)
-
+    var keys = Object.keys(recipeData[random].nutrition);
+    var values = Object.values(recipeData[random].nutrition);
 
     for (var i = 0; i < keys.length; i++) {
       content += `
@@ -1031,7 +1034,9 @@ function getRandom() {
         <div class="inner d-flex justify-content-between align-items-center gap-5 p-3 rounded-3">
           <div class="bg-gray-200 d-flex justify-content-between align-items-center gap-5 p-3 rounded-3 w-100">
             <div>
-            <span class="nutrition-icon icon-${i+1} me-2"><i class="${iconsClassList[i]}"></i></span>
+            <span class="nutrition-icon icon-${i + 1} me-2"><i class="${
+        iconsClassList[i]
+      }"></i></span>
             <span>${keys[i]}</span>
           </div>
           <div class="fw-medium">
